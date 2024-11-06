@@ -13,12 +13,17 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 55,
+        width: 250,
+        height: 50,
+        
         decoration: BoxDecoration(
-            color: kPrimaryColor,
+        gradient: const  LinearGradient(
+      colors: [Color(0xff2193b0), Color(0xff6dd5ed)],
+      begin: Alignment.bottomLeft,
+      end: Alignment.bottomRight,
+    ),
             borderRadius: BorderRadius.circular(
-              8,
+              30,
             )),
         child: Center(
           child: isLoading
@@ -32,7 +37,7 @@ class CustomButton extends StatelessWidget {
               : const Text(
                   'Add',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),

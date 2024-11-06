@@ -9,14 +9,20 @@ class CustomIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 46,
-      width: 46,
+      height: 50,
+      width: 50,
       decoration: BoxDecoration(
-          color: Colors.white.withOpacity(.05),
+      gradient:  LinearGradient(
+      colors: [Color(0xff2193b0), Color(0xff6dd5ed)],
+      begin: Alignment.bottomLeft,
+      end: Alignment.bottomRight,
+    ),
+         
           borderRadius: BorderRadius.circular(16)),
       child: IconButton(
         onPressed: onPressed,
         icon: Icon(
+          color: Colors.white,
           icon,
           size: 28,
         ),
